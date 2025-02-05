@@ -1,183 +1,148 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
+/* 
+Global Reset: 
+Resets margin, padding, and ensures consistent box-sizing for all elements.
 */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+html {
+  font-size: 62.5%; }
 
 body {
-      font-family: "lato",sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.7;
-      color: #777;
-      padding: 30px;
-      
-     
-}
-.logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-
-}
-.logo {
-    height: 35px;
-}
+  font-family: "lato", sans-serif;
+  /* font-size: 16px; */
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
 
 .header {
-  background-image:linear-gradient(
-    to right bottom ,
-    rgba(126, 213, 111, 0.8) , rgba(40, 180, 133, 0.8) ),
-     url("../img//hero.jpg");
-  clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100%);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img//hero.jpg");
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   background-size: cover;
   background-position: top;
   position: relative;
-  height: 95vh;
-}
-
-.text-box {
+  height: 95vh; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50% , -50%);
-    text-align: center;
-}
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    padding-bottom: 60px;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  padding-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-weight: 400;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 2s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 2s ease-out; }
 
-}
-
-.heading-primary-main {
-   display: block;
-   font-weight: 400;
-   font-size: 60px;
-   letter-spacing: 35px;
-   animation: moveInLeft 2s ease-out;
-}
-
-.heading-primary-sub {
-  display: block;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 17.4px;
-  animation: moveInRight 2s ease-out;
-}
-
-
+/* 
+Animation: Move In from the Left
+- Starts off invisible and moves from -100px left.
+- Has a slight bounce effect at 80% before settling.
+*/
 @keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-    0%  {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    80% {
-        transform: translateX(10px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
+/* 
+Animation: Move In from the Right
+- Similar to `moveInLeft`, but starts from the right.
+*/
 @keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-    0%  {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    80% {
-        transform: translateX(-10px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
-
-.btn:link,
-.btn:visited {
-   text-decoration: none;
-   text-transform: uppercase;
-   padding: 15px 40px;
-   display:inline-block;
-   border-radius: 40px;
-   transition: all .2s;
-   position: relative;
-   
-}
+.btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 4rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem; }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    border-radius: 40px;
-    transition: all .4s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  border-radius: 4rem;
+  transition: all 0.4s; }
 
-}
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
-.btn:hover::after {
-   transform: scaleX(1.4) scaleY(1.6);
-   opacity: 0;
-
-}
-
-.btn-white::after {
-   background-color: #fff;
-}
-
-.btn-white {
-    background-color: #fff;
-    color: #777;
-}
-
+/* 
+Button Entrance Animation:
+- Fades in from below with a slight delay.
+*/
 @keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-    0%  {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
-.btn-animated {
-    animation: moveInButton .5s ease-out .75s ;
-    animation-fill-mode: backwards;
-}
+/* 
+Applies the Button Entrance Animation
+- Runs for 0.5s with a 0.75s delay.
+- `animation-fill-mode: backwards;` ensures it starts from an invisible state.
+*/
+.btn--animated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
