@@ -1,0 +1,63 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 
+Animation: Move In from the Right
+- Similar to `moveInLeft`, but starts from the right.
+*/
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+/* 
+Button Entrance Animation:
+- Fades in from below with a slight delay.
+*/
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 
+Applies the Button Entrance Animation
+- Runs for 0.5s with a 0.75s delay.
+- `animation-fill-mode: backwards;` ensures it starts from an invisible state.
+*/
+.btn--animated {
+    animation: moveInButton 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+}
