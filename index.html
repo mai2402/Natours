@@ -13,6 +13,26 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navigation__checkbox">
+            <label for="navigation__checkbox" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                     <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
+                     <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
+                     <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                     <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                     <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                </ul>
+            </nav>
+
+        </div>
         <!-- HEADER -->
         <header class="header">
             <div class="header__logo-box">
@@ -23,7 +43,7 @@
                     <span class="heading-primary--main">outdoors</span>
                     <span class="heading-primary--sub">is where life happens</span>
                 </h1>
-                <a class="btn btn--white btn--animated " href="#">Discover our tours</a>
+                <a class="btn btn--white btn--animated " href="#section-tours">Discover our tours</a>
             </div>
          </header>
 
@@ -108,7 +128,7 @@
     </section>
 
     <!-- TOURS SECTION -->
-     <section class="section-tours">
+     <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
                 Most popular tours
@@ -143,7 +163,7 @@
                             <p class="card__price-only">Only</p>
                             <p class="card__price-value">297$</p>
                         </div>
-                        <a class="btn btn--white " href="#"> Book Now!</a>
+                        <a class="btn btn--white " href="#popup"> Book Now!</a>
 
                      </div>
                 </div>
@@ -178,7 +198,7 @@
                             <p class="card__price-only">Only</p>
                             <p class="card__price-value">497$</p>
                         </div>
-                        <a class="btn btn--white " href="#"> Book Now!</a>
+                        <a class="btn btn--white " href="#popup"> Book Now!</a>
 
                      </div>
                    </div>
@@ -213,7 +233,7 @@
                             <p class="card__price-only">Only</p>
                             <p class="card__price-value">897$</p>
                         </div>
-                        <a class="btn btn--white " href="#"> Book Now!</a>
+                        <a class="btn btn--white " href="#popup"> Book Now!</a>
 
                      </div>
                    </div>
@@ -332,8 +352,51 @@
         </div>
 
       </section>
-    
      </main>
+
+     <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="img/logo-green-2x.png"  alt="full logo" class="footer__logo"/>
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Mai Fareed</a> for her learning journey Copyright: &copy; by Mai Fareed.Your are 100% allowed to use this wepage for personal and commericla use.But not to claim it as ypur design.Acredit to the original author,Jonas schmedtmann.is ofcourse highly appriciated.
+                </p>
+            </div>
+
+        </div>
+     </footer>
+
+       <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="tour image" class="popup__image">
+                <img src="img/nat-9.jpg" alt="tour image" class="popup__image">
+            </div> 
+            <div class="popup__right">
+                <a class="popup__close" href="#section-tours">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Importnant &ndash; Please read these terms before booking</h3>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsa molestias fugiat, provident vitae quis odio, sapiente voluptas totam pariatur voluptatum eos. Doloremque nihil, esse nemo incidunt neque possimus ullam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsa molestias fugiat, provident vitae quis odio, sapiente voluptas totam pariatur voluptatum eos. Doloremque nihil, esse nemo incidunt neque possimus ullam.
+                </p>
+
+                <a href="#" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+       </div>
         
     </body>
 </html>
