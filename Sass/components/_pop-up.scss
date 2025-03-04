@@ -9,6 +9,9 @@
       visibility: hidden;
       opacity: 0;
 
+    
+
+
 
     &__content {
          @include absCenter;
@@ -21,6 +24,18 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+
+        @include respond(tab-land) {
+            display: block;
+            width: 90%;
+        }
+
+        @include respond(tab-port) {
+            display: block;
+            width: 90%;
+        }
+
        
     }
 
@@ -40,6 +55,8 @@
     &__image {
           display: block;
           width: 100%;
+
+        
     }
 
     &__text {
@@ -75,10 +92,43 @@
       display: inline-block;
       line-height: 1;
       transition: all .2s;
+       
+       
+      
       }
 
       &:hover {
           color: $color-primary;
       }
     }
+
+
+    @include respond(phone) {
+        &__content {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            width: 95%; 
+        }
+    
+        &__left {
+            display: flex !important;
+            width: 100% !important; 
+            justify-content: space-between; 
+            
+        }
+    
+        &__image {
+            width: 50%; 
+        }
+    
+        &__right {
+            width: 100% !important; 
+            display: block !important;
+            text-align: center; 
+            padding: 2rem; 
+        }
+    }
+    
+    
 }

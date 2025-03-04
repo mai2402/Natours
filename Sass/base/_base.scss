@@ -12,9 +12,29 @@
 
 html {
     //define 1 rem
-    font-size: 62.5%;
+    font-size: 62.5%;   //10px = 1rem
+
+
+    
+    @include respond (tab-land) {    // width <1200?  600 , 900 px will be applied 
+        font-size: 56.25%;             // 9px = 1rem
+    }
+
+
+    @include respond (tab-port) {  //width <900?    600 wll be applied
+        font-size: 50%;            // 8px = 1rem
+    }
+
+    @include respond (big-desktop) {
+        font-size: 75%;        //12px =1rem
+    }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond (tab-port) {  
+       padding: 0;           
+    }
 }
