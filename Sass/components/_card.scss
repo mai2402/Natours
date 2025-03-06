@@ -161,8 +161,8 @@
 
 
 
-
-  @include respond(tab-port) {
+// apply the styling on tablets and all touch screens because no hover effect on these devices
+  @media (max-width : 56.25em ), (hover: none) {
     height: auto;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
